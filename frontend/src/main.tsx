@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import './styles.css';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API = import.meta.env.API_URL || 'http://localhost:8000';
 type Point = { start_time: string; generation_mw: number; publish_time?: string };
 type Forecast = { delivery_date: string; decision_cutoff: string; points: Point[]; actuals: Point[] };
 type Metrics = { count:number; mae_mw:number; rmse_mw:number; normalized_error_pct:number; mean_bias_mw:number; p90_abs_error_mw:number; p95_abs_error_mw:number };
